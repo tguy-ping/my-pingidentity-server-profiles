@@ -4,6 +4,10 @@ objectClass: ${BASE_CLASS}
 ${BASE_ATTRIBUTE}: ${BASE_VALUE}
 aci: (targetattr!="userPassword")(version 3.0; acl "Allow anonymous read access for anyone"; allow (read,search,compare) userdn="ldap:///anyone";)
 aci: (targetattr="*")(version 3.0; acl "Allow users to update their own entries"; allow (write) userdn="ldap:///self";)
+aci: (targetattr="telephoneNumber")(version 3.0; acl "Demo attribute access - Deny anyone"; deny (read,search,compare) userdn="ldap:///anyone";)
+aci: (targetattr="telephoneNumber")(version 3.0; acl "Demo attribute access - Allow group"; allow (read,search,compare) groupdn="ldap:///cn=group.0,ou=groups,ou=source,${USER_BASE_DN}";)
+aci: (targetattr="telephoneNumber")(version 3.0; acl "Demo attribute access - Allow attribute"; allow (read,search,compare) userattr="description#PHONEADMIN";)
+aci: (targetattr="*")(version 3.0; acl "Grant full access for the admin users"; allow (all) groupdn="ldap:///cn=admin-users,ou=groups,ou=source,${USER_BASE_DN}";)
 
 dn: ou=source,${USER_BASE_DN}
 objectClass: top
@@ -43,6 +47,7 @@ sn: Brooke
 cn: Raeann Brooke
 uid: user.0
 userPassword: 2FederateM0re
+telephoneNumber: 555-867-5309
 
 dn: uid=user.1,ou=People,ou=source,${USER_BASE_DN}
 objectClass: top
@@ -52,6 +57,7 @@ sn: Seawell
 cn: Esko Seawell
 uid: user.1
 userPassword: 2FederateM0re
+telephoneNumber: 555-867-5309
 
 dn: uid=user.2,ou=People,ou=source,${USER_BASE_DN}
 objectClass: top
@@ -61,6 +67,7 @@ sn: Tancordo
 cn: Sidonia Tancordo
 uid: user.2
 userPassword: 2FederateM0re
+telephoneNumber: 555-867-5309
 
 dn: uid=user.3,ou=People,ou=source,${USER_BASE_DN}
 objectClass: top
@@ -70,6 +77,18 @@ sn: Knio
 cn: Pierre-Marc Knio
 uid: user.3
 userPassword: 2FederateM0re
+telephoneNumber: 555-867-5309
+description:phoneAdmin
+
+dn: uid=tguy,ou=People,ou=source,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: uidObject
+sn: Guy
+cn: Trace Guy
+uid: tguy
+userPassword: 2FederateM0re
+telephoneNumber: 555-867-5309
 
 dn: cn=group.0,ou=groups,ou=source,${USER_BASE_DN}
 objectClass: top
@@ -84,3 +103,9 @@ objectClass: groupOfNames
 cn: group.1
 member: uid=user.2,ou=People,ou=source,${USER_BASE_DN}
 member: uid=user.3,ou=People,ou=source,${USER_BASE_DN}
+
+dn: cn=admin-users,ou=groups,ou=source,${USER_BASE_DN}
+objectClass: top
+objectClass: groupOfNames
+cn: admin-users
+member: uid=tguy,ou=People,ou=source,${USER_BASE_DN}
