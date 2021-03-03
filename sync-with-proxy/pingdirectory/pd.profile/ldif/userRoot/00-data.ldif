@@ -1,7 +1,7 @@
 dn: ${USER_BASE_DN}
 objectClass: top
-objectClass: ${BASE_CLASS}
-${BASE_ATTRIBUTE}: ${BASE_VALUE}
+objectClass: organization
+o: sync
 aci: (targetattr!="userPassword")(version 3.0; acl "Allow anonymous read access for anyone"; allow (read,search,compare) userdn="ldap:///anyone";)
 aci: (targetattr="*")(version 3.0; acl "Allow users to update their own entries"; allow (write) userdn="ldap:///self";)
 aci: (targetattr="telephoneNumber")(version 3.0; acl "Demo attribute access - Deny anyone"; deny (read,search,compare) userdn="ldap:///anyone";)
