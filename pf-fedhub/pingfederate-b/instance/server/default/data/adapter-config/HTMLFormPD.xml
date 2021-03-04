@@ -19,7 +19,7 @@
         <urn:Field name="Password Reset Policy Contract"/>
         <urn:Field name="Revoke Sessions After Password Change Or Reset">false</urn:Field>
         <urn:Field name="Notification Publisher"/>
-        <urn:Field name="Login Template">html.form.login.template.html</urn:Field>
+        <urn:Field name="Login Template">company-b.html.form.login.template.html</urn:Field>
         <urn:Field name="Logout Path"/>
         <urn:Field name="Logout Redirect"/>
         <urn:Field name="Logout Template">idp.logout.success.page.template.html</urn:Field>
