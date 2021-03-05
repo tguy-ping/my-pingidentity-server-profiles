@@ -109,3 +109,13 @@ userPassword: 2FederateM0re
 pf-connected-identity: auth-source=pf-local-identity:user-id=auditor
 
 
+dn: uid=tguy,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+sn: Guy
+cn: Trace Guy
+givenName: Trace
+uid: tguy
+userPassword: 2FederateM0re

@@ -4005,13 +4005,13 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #3d454d;
-  background-color: rgba(61, 138, 110 0.9) \9;
+  background-color: rgba(61, 138, 110, 0.9) \9;
   /*IE9 hack */
-  background-image: radial-gradient(40% 40%, circle cover, rgba(61, 138, 110 0.9) 30%, #3d454d 80%);
-  background-image: -o-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110 0.9) 30%, #3d454d 80%);
-  background-image: -ms-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110 0.9) 30%, #3d454d 80%);
-  background-image: -moz-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110 0.9) 30%, #3d454d 80%);
-  background-image: -webkit-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110 0.9) 30%, #3d454d 80%);
+  background-image: radial-gradient(40% 40%, circle cover, rgba(61, 138, 110, 0.9) 30%, #3d454d 80%);
+  background-image: -o-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110, 0.9) 30%, #3d454d 80%);
+  background-image: -ms-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110, 0.9) 30%, #3d454d 80%);
+  background-image: -moz-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110, 0.9) 30%, #3d454d 80%);
+  background-image: -webkit-radial-gradient(40% 40%, circle cover, rgba(61, 138, 110, 0.9) 30%, #3d454d 80%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
