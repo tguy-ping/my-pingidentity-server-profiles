@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1614889738485" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1614901446480" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="Identifier First" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
@@ -36,8 +36,10 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="Zxp6N6W5PH9onACT" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="mail" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="firstname" Type="IdP Connection" AttributeSourceId="w_EilDZ73.zl8rAhpbkzl3_h8.8" Value="firstname" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="mail" Type="IdP Connection" AttributeSourceId="w_EilDZ73.zl8rAhpbkzl3_h8.8" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:AttributeMap Name="subject" Type="IdP Connection" AttributeSourceId="w_EilDZ73.zl8rAhpbkzl3_h8.8" Value="SAML_SUBJECT" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="lastname" Type="IdP Connection" AttributeSourceId="w_EilDZ73.zl8rAhpbkzl3_h8.8" Value="lastname" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
@@ -56,8 +58,10 @@
                     <urn:AstChild context="Success">
                         <urn:AstAction apcId="Zxp6N6W5PH9onACT" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AttributeMapping>
-                                <urn1:AttributeMap Name="mail" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="firstname" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="firstname" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="lastname" Type="Adapter" AttributeSourceId="HTMLFormPD" Value="lastname" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                 <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             </urn:AttributeMapping>
                         </urn:AstAction>
@@ -82,8 +86,10 @@
                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                         </urn:InboundAttributeMapping>
                         <urn:OutboundAttributeMapping>
+                            <urn1:AttributeMap Name="firstname" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="cn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:AttributeMap Name="mail" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:AttributeMap Name="subject" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            <urn1:AttributeMap Name="lastname" Type="Local Account" AttributeSourceId="RBSQIwi5KWYN9ZGK" Value="sn" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                         </urn:OutboundAttributeMapping>
                     </urn:AstAction>
