@@ -1194,17 +1194,17 @@
             WARNING: This is intended for debugging purposes only. Sensitive information, such as passwords, may be
             logged with this Logger.
         -->
-        <!--
+
         <Logger name="org.sourceid.servlet.filter.HttpRequestHeaderFilter" level="TRACE" />
-        -->
+
         <!--
             Uncomment HttpRequestParameterFilter logger for logging of all HTTP request parameter values
             WARNING: This is intended for debugging purposes only. Sensitive information, such as passwords, may be
             logged with this Logger.
         -->
-        <!--
+
         <Logger name="org.sourceid.servlet.filter.HttpRequestParameterFilter" level="TRACE" />
-        -->
+
         <!--
             Uncomment OutMessageContext logger to provide more information,
             This may add PII information to logs.
@@ -1212,6 +1212,9 @@
         <!--
         <Logger name="org.sourceid.websso.wrapper.OutMessageContext" level="TRACE" />
         -->
+		
+		<Logger name="org.sourceid.util.log.PolicyTreeLogger" level="DEBUG" />
+		
         <Logger name="com.jolbox" level="OFF" />
         <Logger name="com.pingidentity.crypto.CertificateServiceImpl" level="INFO" />
         <!-- Adjust the priority value to DEBUG to get additional logging to help troubleshoot XML Signature problems -->
